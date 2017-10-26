@@ -42,3 +42,24 @@ body {
 #navbar-button:active {
   color: #f142f4;
 }
+
+#signup-header {
+  text-align: center;
+  font-size: 65px;
+}
+
+#social-container {
+  text-align: center;
+}
+
+.social-div {
+  display: inline-block;
+  height: 600px;
+  width: 20%;
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  border-radius: 5px;
+  margin: 40px 50px;
+  background-color: white;
+}
