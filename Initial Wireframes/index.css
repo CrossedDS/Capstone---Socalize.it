@@ -1,5 +1,6 @@
 html {
   font-family: 'Dosis', sans-serif;
+  background-color: #dddddd;
 }
 
 body {
@@ -8,38 +9,76 @@ body {
 
 #navbar {
   display: inline-block;
-  border-style: solid;
-  border-width: 4px;
-  border-color: black;
+  background-color: black;
   width: 100%;
 }
 
 #navbar-logo {
-  float: right;
+  float: left;
   text-align: center;
-  font-size: 40px;
-  padding: 10px;
-  background-color: black;
+  font-size: 25px;
+  padding: 12px;
+  text-decoration: none;
   color: white;
+}
+
+#navbar-logo:hover {
+  color: #f142f4;
 }
 
 #navbar-button {
-  float: left;
-}
-
-#navbar #navbar-button {
+  float: right;
+  padding: 12px;
   text-align: center;
-  font-size: 40px;
+  font-size: 25px;
   text-decoration: none;
-  padding: 10px;
-}
-
-#navbar #navbar-button:hover {
-  background-color: black;
   color: white;
 }
 
-#navbar #navbar-button:active {
+#navbar-button:hover {
+  color: #f142f4;
+}
+
+#navbar-button:active {
+  color: #f142f4;
+}
+
+#feed-box {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 25%;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 300px 10px;
+  font-size: 20px;
+}
+
+#signup-div {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  width: 25%;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#signup-div:hover {
   background-color: black;
-  color: white;
+}
+
+#signup-button {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+
+#signup-button:hover {
+  color: #f142f4;
 }
