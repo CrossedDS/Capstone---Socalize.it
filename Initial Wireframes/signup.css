@@ -97,3 +97,24 @@ body {
 .div-header {
   font-size: 27px;
 }
+
+.social-input {
+  font-family: 'Dosis', sans-serif;
+  font-size: 20px;
+  width: 80%;
+  padding: 20px;
+  margin-top: 40px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.submit-button {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  margin-top: 100px;
+  width: 80%;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+}
