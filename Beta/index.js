@@ -1,24 +1,36 @@
-const NYT_TOP_API = "https://api.nytimes.com/svc/topstories/v2/world.json";
+let NEWS_TEMPLATE = (
+  '<div>' +
+    '<h1 id="news-header"></h1>' +
+      '<a id="news-url" href=""><img id="news-image" src=""></a>' +
+  '</div>'
+);
 
-function getDataFromAPI(callback) = {
-  let key = {
-    'api-key': '7d043322ac9d4f7c9476f12845e76475',
-  };
-  $.getJSON(NYT_TOP_API, key, callback)
-};
+function getDataFromApi() {
+  let url = "https://api.nytimes.com/svc/topstories/v2/world.json";
+  url += '?' + $.param({
+    'api-key': "7d043322ac9d4f7c9476f12845e76475"
+  });
+  $.ajax({
+    url: url,
+    method: 'GET',
+  }).done(function(result) {
+    console.log(result);
+  }).fail(function(err) {
+    throw err;
+});
 
 function renderResult(result) {
-  return `
-  <div>
-    <h2 id="result-header"><a href="${result.url}" target="_blank">${result.title}</a></h2>
-      <img id="result-image" src="${result.multimedia[2].url}">
-    </div>
-    `
-};
+  let template = $(NEWS_TEMPLATE);
+  template.find("#news-header").attr("h1", result.title);
+  template.find("#news-image").attr("src", result.multimedia[1].url);
+  template.find("#news-url").attr("href", result.url)
+  return template;
+}
 
-function displayNYTNews(data) {
-  const results = data.results.map((item, index) => renderResult(item));
-  $('#news-feed').html(results);
+$(document).ready(function displayNYTData(data) {
+  let results = data.results.map(function(result, index) {
+    return renderResult(result);
+  });
+  $('#news-box').html(results);
+  });
 };
-
-$(displayNYTNews);
