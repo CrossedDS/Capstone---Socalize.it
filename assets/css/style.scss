@@ -1,0 +1,41 @@
+* {
+  font-family: 'Dosis', sans-serif;
+}
+
+#logo {
+  font-size: 30px;
+  color: white;
+}
+
+#intro-text {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.news-container {
+  border-color: silver;
+  border-style: solid;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 50px;
+}
+
+.news-title, .news-desc, .news-source, .news-time {
+  text-align: center;
+}
+
+.news-desc {
+  font-size: 18px;
+}
+
+.news-source {
+  font-style: italic;
+}
+
+.news-time {
+  font-weight: bold;
+}
+
+.img-responsive {
+  margin: 0 auto;
+}
