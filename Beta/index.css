@@ -7,3 +7,6 @@
   color: white;
 }
 
+.news-title, .news-desc, .news-source, .news-time, .news-image {
+  text-align: center;
+}
