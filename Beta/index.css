@@ -3,13 +3,18 @@
 }
 
 #logo {
-  font-size: 30px;
+  font-size: 40px;
   color: white;
 }
 
 #intro-text {
   text-align: center;
+  padding-top: 100px;
   padding-bottom: 50px;
+}
+
+#news-box {
+  box-shadow: 5px 5px 5px grey;
 }
 
 .news-container {
@@ -38,4 +43,18 @@
 
 .img-responsive {
   margin: 0 auto;
+}
+
+#top-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+#about-me-button {
+  font-size: 20px;
 }

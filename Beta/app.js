@@ -2,7 +2,8 @@ function grabDataFromNewsAPI(callback) {
   const NEWS_API = 'https://newsapi.org/v2/top-headlines';
   const query = {
     'apiKey': "2e60660726d94e64b4f8265d7bce80c3",
-    'sources': "abc-news,cbs-news,cnn,fox-news,google-news,nbc-news,the-washington-post,usa-today",
+    'sources': "cbs-news,cnn,fox-news,google-news,nbc-news,the-washington-post,usa-today",
+    'sortBy': "publishedAt",
   }
   $.getJSON(NEWS_API, query, callback);
 };
@@ -29,3 +30,19 @@ function showResults(data) {
 $(document).ready(function(){
   grabDataFromNewsAPI(showResults);
 });
+
+function showTopButton() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        $("#top-button").fadeIn();
+    } else {
+        $("#top-button").fadeOut();
+    };
+};
+
+function topButtonIsClicked() {
+    $('html,body').animate({ scrollTop: 0 }, 'slow');
+};
+
+window.onscroll = function() {
+  showTopButton()
+};
