@@ -15,13 +15,13 @@
 
 #search-form {
   padding-bottom: 50px;
-  width: 70%;
   margin-left: auto;
   margin-right: auto;
+  width: 50%;
 }
 
 #form-text {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 #news-box {

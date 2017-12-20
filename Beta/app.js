@@ -31,6 +31,18 @@ $(document).ready(function(){
   grabDataFromNewsAPI(showResults);
 });
 
+function filter(element) {
+  let value = $('#form-text').val();
+  $(".news-container").each(function() {
+    if ($(this).text().search(value) > -1) {
+      $(this).fadeIn();
+    }
+    else {
+      $(this).fadeOut();
+    }
+  });
+};
+
 function showTopButton() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         $("#top-button").fadeIn();
