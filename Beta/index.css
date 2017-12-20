@@ -13,6 +13,17 @@
   padding-bottom: 50px;
 }
 
+#search-form {
+  padding-bottom: 50px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#form-text {
+  font-size: 30px;
+}
+
 #news-box {
   box-shadow: 5px 5px 5px grey;
 }
@@ -67,8 +78,8 @@
 #self-portrait {
   display: block;
   margin: auto;
-  width: 25%;
-  height: 25%;
+  width: 30%;
+  height: 30%;
 }
 
 #about-me-desc {
