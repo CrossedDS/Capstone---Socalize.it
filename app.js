@@ -31,17 +31,18 @@ $(document).ready(function(){
   grabDataFromNewsAPI(showResults);
 });
 
-function filter(element) {
-  let value = $('#form-text').val();
-  $(".news-container").each(function() {
-    if ($(this).text().search(value) > -1) {
-      $(this).fadeIn();
-    }
-    else {
-      $(this).fadeOut();
-    }
+$(document).ready(function(){
+  $("#form-text").on("keyup", function() {
+    let value = $(this).val().toLowerCase();
+    $(".news-container").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
   });
-};
+});
+
+$('form input').on('keypress', function(e) {
+    return e.which !== 13;
+});
 
 function showTopButton() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
